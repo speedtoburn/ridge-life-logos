@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ridge Life Roofing · Logo Options</title>
+<meta name="description" content="Every version of the Ridge Life Roofing logo, and three picks to make: trees, badge and sun.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141414">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://speedtoburn.github.io/ridge-life-logos/">
+<meta property="og:title" content="Ridge Life Roofing · Logo Options">
+<meta property="og:description" content="Three picks to make: trees, badge and sun.">
+<meta property="og:image" content="https://speedtoburn.github.io/ridge-life-logos/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="apple-mobile-web-app-title" content="Ridge Life">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&amp;family=Barlow:wght@400;500;600&amp;family=Montserrat:wght@800&amp;display=swap">
+<style>
+/* Layout: a black title-block cover with the logo, then one long column: the three picks (trees, badge, sun)
+   with the places the logo goes in between. Tiles sit in grids of one column on a phone and up to four on a desk;
+   a sticky switch flips every picture between the two tree styles. */
+:root {
+  --paper: #F4F3F0;
+  --card: #FFFFFF;
+  --ink: #1B1B1B;
+  --muted: #625D57;
+  --line: #E0DCD5;
+  --accent: #F15A24;
+  --accent-ink: #B8431A;
+  --on-accent: #FFFFFF;
+  --cover: #141414;
+  --cover-ink: #F4F2EE;
+  --cover-muted: #9C968F;
+  --tile-white: #FFFFFF;
+  --tile-black: #141414;
+  --tile-orange: #F15A24;
+  --tile-soft: #E9E6E0;
+  --brand-black: #1B1B1B;
+  --scrim: rgba(10, 10, 10, 0.78);
+  --display: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --body: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --label: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --gutter: clamp(16px, 4vw, 40px);
+  --r: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #121110; --card: #1C1B19; --ink: #F1EEE9; --muted: #A49E96; --line: #2F2C29;
+    --accent-ink: #FF7C4A; --tile-soft: #2A2825; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #121110; --card: #1C1B19; --ink: #F1EEE9; --muted: #A49E96; --line: #2F2C29;
+  --accent-ink: #FF7C4A; --tile-soft: #2A2825; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.55 var(--body); }
+.wrap { max-width: 1160px; margin-inline: auto; padding-inline: var(--gutter); }
+img { display: block; width: 100%; max-width: 100%; height: auto; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* cover: a title block, its corners labelled like a drawing sheet */
+.cover { background: var(--cover); color: var(--cover-ink); border-bottom: 4px solid var(--accent); }
+.cover .wrap { display: grid; grid-template-columns: 1fr 1fr; row-gap: clamp(18px, 4vw, 34px); padding-block: 18px 22px; }
+.corner { margin: 0; font: 600 0.8125rem/1.2 var(--label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--cover-muted); }
+.corner b { color: var(--cover-ink); font-weight: 600; }
+.corner.r { text-align: right; }
+.cover-logo { grid-column: 1 / -1; justify-self: center; width: min(560px, 88%); }
+
+.intro { display: grid; gap: 18px; padding-block: 26px 4px; }
+.lede { margin: 0; max-width: 46ch; font: 500 clamp(1.15rem, 2.4vw, 1.4rem)/1.4 var(--body); text-wrap: balance; }
+.picks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.picks a { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; padding: 12px 14px;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--r); color: inherit; text-decoration: none; }
+.picks .n { grid-row: span 2; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent); color: var(--on-accent); font: 800 1rem/1 var(--display); }
+.picks b { font: 800 1.02rem/1.2 var(--display); }
+.picks small { color: var(--muted); font-size: 0.92rem; }
+
+/* the tree switch: stays at the top while you scroll */
+.switchbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; margin-top: 22px;
+  background: var(--paper); background: color-mix(in srgb, var(--paper) 88%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border-block: 1px solid var(--line); }
+.switchbar .wrap { display: flex; align-items: center; gap: 12px; padding-block: 9px; }
+.switch-label { font: 600 0.8125rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.seg { display: inline-flex; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.seg button { font: 600 0.95rem/1 var(--body); color: var(--ink); background: transparent; border: 0; border-radius: 999px;
+  padding: 9px 16px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.switch-hint { margin-left: auto; color: var(--muted); font-size: 0.92rem; }
+
+.sec { display: grid; gap: 20px; padding-block: clamp(40px, 7vw, 68px) 0; scroll-margin-top: 64px; }
+.sec-head { display: grid; gap: 6px; max-width: 62ch; }
+.eyebrow { margin: 0; font: 600 0.8125rem/1.2 var(--label); letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-ink); }
+.sec h2 { margin: 0; font: 800 clamp(1.6rem, 4.2vw, 2.35rem)/1.1 var(--display); letter-spacing: -0.01em; text-wrap: balance; }
+.sec h3 { margin: 10px 0 0; font: 800 1.15rem/1.2 var(--display); }
+.sub { margin: 0; color: var(--muted); }
+
+.g2, .g3, .g4, .trio { display: grid; gap: 14px; }
+.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.trio { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 620px; }
+
+.tile { margin: 0; display: grid; gap: 8px; align-content: start; }
+.tile figcaption { display: grid; gap: 1px; }
+.tile figcaption b { font: 600 1rem/1.3 var(--body); }
+.tile figcaption span { color: var(--muted); font-size: 0.92rem; line-height: 1.4; }
+.art { border-radius: var(--r); overflow: hidden; display: grid; place-items: center; }
+.art.pad { padding: 9% 8%; }
+.trio .art.pad { aspect-ratio: 1; padding: 18%; }
+.on-white { background: var(--tile-white); box-shadow: inset 0 0 0 1px var(--line); }
+.on-black { background: var(--tile-black); }
+.on-orange { background: var(--tile-orange); }
+.on-soft { background: var(--tile-soft); }
+.on-soft.pad { padding: 8%; }
+img[data-zoom] { cursor: zoom-in; }
+
+/* pick 1: the two cards are the switch */
+.choice { font: inherit; color: inherit; text-align: left; display: grid; gap: 12px; padding: 12px; position: relative;
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px; cursor: pointer; }
+.choice[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.choice .art.pad { padding: 10% 9%; }
+.choice-text { display: grid; gap: 4px; padding: 2px 4px 4px; }
+.choice-text b { font: 800 1.2rem/1.2 var(--display); }
+.choice-text span { color: var(--muted); font-size: 0.95rem; line-height: 1.45; }
+.tag { position: absolute; top: 20px; right: 20px; padding: 5px 9px; border-radius: 999px; background: var(--accent);
+  color: var(--on-accent); font: 600 0.75rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; visibility: hidden; }
+.choice[aria-pressed="true"] .tag { visibility: visible; }
+
+.sun-card { margin: 0; display: grid; gap: 8px; align-content: start; }
+.sun-card .minis { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sun-card figcaption { display: grid; gap: 1px; }
+.sun-card figcaption b { font: 800 1.05rem/1.25 var(--display); }
+.sun-card figcaption span { color: var(--muted); font-size: 0.92rem; line-height: 1.4; }
+
+.foot { display: grid; gap: 14px; padding-block: 64px 44px; color: var(--muted); }
+.foot h2 { margin: 0; font: 800 1.15rem/1.2 var(--display); color: var(--ink); }
+.swatches { display: flex; flex-wrap: wrap; gap: 14px 26px; }
+.sw { display: flex; align-items: center; gap: 10px; color: var(--ink); }
+.sw i { width: 34px; height: 34px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px var(--line); }
+.sw code { font: 600 0.92rem/1 var(--label); letter-spacing: 0.08em; color: var(--muted); }
+.foot p { margin: 0; max-width: 62ch; }
+
+dialog.zoom { border: 0; padding: 0; width: min(96vw, 1100px); max-height: 92vh; max-height: 92dvh; border-radius: 12px;
+  overflow: hidden; background: var(--zbg, var(--card)); }
+dialog.zoom::backdrop { background: var(--scrim); }
+dialog.zoom img { width: 100%; max-height: 92vh; max-height: 92dvh; object-fit: contain; cursor: zoom-out; }
+
+@media (max-width: 960px) { .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .picks { grid-template-columns: minmax(0, 1fr); } .switch-hint { display: none; } }
+@media (max-width: 600px) { .g2, .g3, .g4 { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: no-preference) { .choice, .seg button { transition: background-color 0.15s, box-shadow 0.15s, color 0.15s; } }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap">
+    <p class="corner"><b>Ridge Life Roofing</b></p>
+    <p class="corner r">Logo options</p>
+    <div class="cover-logo"><img src="img/logo-black-individual.webp" data-individual="img/logo-black-individual.webp" data-dense="img/logo-black-dense.webp" width="1000" height="774" alt="Ridge Life Roofing logo"></div>
+    <p class="corner">Woodstock, GA</p>
+    <p class="corner r">Est. 2026</p>
+  </div>
+</header>
+
+<div class="wrap intro">
+  <p class="lede">Every version of the Ridge Life logo, sorted by what it's for. There are three picks to make. Tap any picture to see it bigger.</p>
+  <ol class="picks">
+    <li><a href="#trees"><span class="n">1</span><b>Trees</b><small>Individual or dense</small></a></li>
+    <li><a href="#badge"><span class="n">2</span><b>Badge</b><small>Seal, ribbon or shield</small></a></li>
+    <li><a href="#sun"><span class="n">3</span><b>Sun</b><small>Optional: stripes, streaks, squiggly or none</small></a></li>
+  </ol>
+</div>
+
+<div class="switchbar" role="group" aria-label="Tree style">
+  <div class="wrap">
+    <span class="switch-label">Trees</span>
+    <span class="seg">
+      <button type="button" data-style="individual" aria-pressed="true">Individual</button>
+      <button type="button" data-style="dense" aria-pressed="false">Dense</button>
+    </span>
+    <span class="switch-hint">Switches the trees in every picture</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="sec" id="trees">
+    <header class="sec-head"><p class="eyebrow">Pick 1 of 3</p><h2>Individual trees or dense forest?</h2><p class="sub">The same logo, two ways to draw the forest. Tap one and every picture on this page switches to it.</p></header>
+    <div class="g2"><button type="button" class="choice" data-style="individual" aria-pressed="true"><span class="art on-white pad"><img src="img/logo-white-individual.webp" width="1000" height="774" alt="Ridge Life Roofing logo with individual trees"></span><span class="choice-text"><b>Individual trees</b><span>Every tree stands on its own, so the logo stays crisp at any size, in print, vinyl and stitching.</span></span><span class="tag">Showing</span></button><button type="button" class="choice" data-style="dense" aria-pressed="false"><span class="art on-white pad"><img src="img/logo-white-dense.webp" width="1000" height="894" alt="Ridge Life Roofing logo with dense forest"></span><span class="choice-text"><b>Dense forest</b><span>A thick forest with soft shading. The shading prints and shows on screens; vinyl and stitching make the lower trees solid.</span></span><span class="tag">Showing</span></button></div>
+  </section>
+
+  <section class="sec" id="vehicles">
+    <header class="sec-head"><p class="eyebrow">Vehicles</p><h2>On your vehicles</h2><p class="sub">Logo and phone number for a door or side panel, one layout for each vehicle color.</p></header>
+    <div class="g3"><figure class="tile"><div class="art on-white"><img src="img/vehicle-white-individual.webp" data-individual="img/vehicle-white-individual.webp" data-dense="img/vehicle-white-dense.webp" width="1100" height="917" alt="White vehicle layout with logo and phone number" loading="lazy" data-zoom></div><figcaption><b>White vehicle</b></figcaption></figure><figure class="tile"><div class="art on-black"><img src="img/vehicle-black-individual.webp" data-individual="img/vehicle-black-individual.webp" data-dense="img/vehicle-black-dense.webp" width="1100" height="917" alt="Black vehicle layout with logo and phone number" loading="lazy" data-zoom></div><figcaption><b>Black vehicle</b></figcaption></figure><figure class="tile"><div class="art on-orange"><img src="img/vehicle-orange-individual.webp" data-individual="img/vehicle-orange-individual.webp" data-dense="img/vehicle-orange-dense.webp" width="1100" height="917" alt="Orange vehicle layout with logo and phone number" loading="lazy" data-zoom></div><figcaption><b>Orange vehicle</b></figcaption></figure></div>
+  </section>
+
+  <section class="sec" id="signs">
+    <header class="sec-head"><p class="eyebrow">Yard signs · 24 × 18 in</p><h2>In the yard</h2><p class="sub">Each sign says FREE ROOF INSPECTIONS with your number.</p></header>
+    <div class="g4"><figure class="tile"><div class="art on-white"><img src="img/sign-white-individual.webp" data-individual="img/sign-white-individual.webp" data-dense="img/sign-white-dense.webp" width="1100" height="825" alt="White yard sign" loading="lazy" data-zoom></div><figcaption><b>White</b></figcaption></figure><figure class="tile"><div class="art on-black"><img src="img/sign-black-individual.webp" data-individual="img/sign-black-individual.webp" data-dense="img/sign-black-dense.webp" width="1100" height="825" alt="Black yard sign" loading="lazy" data-zoom></div><figcaption><b>Black</b></figcaption></figure><figure class="tile"><div class="art on-orange"><img src="img/sign-orange-individual.webp" data-individual="img/sign-orange-individual.webp" data-dense="img/sign-orange-dense.webp" width="1100" height="825" alt="Orange yard sign" loading="lazy" data-zoom></div><figcaption><b>Orange</b></figcaption></figure><figure class="tile"><div class="art on-white"><img src="img/sign-onecolor-individual.webp" data-individual="img/sign-onecolor-individual.webp" data-dense="img/sign-onecolor-dense.webp" width="1100" height="825" alt="One Color yard sign" loading="lazy" data-zoom></div><figcaption><b>One color</b></figcaption></figure></div>
+  </section>
+
+  <section class="sec" id="badge">
+    <header class="sec-head"><p class="eyebrow">Pick 2 of 3</p><h2>Seal, ribbon or shield?</h2><p class="sub">A badge for hats, shirts, stickers and social media. All three say EST. 2026.</p></header>
+    <div class="g3"><figure class="tile"><div class="art on-soft pad"><img src="img/badge-seal-individual.webp" data-individual="img/badge-seal-individual.webp" data-dense="img/badge-seal-dense.webp" width="800" height="800" alt="Seal badge" loading="lazy" data-zoom></div><figcaption><b>Seal</b></figcaption></figure><figure class="tile"><div class="art on-soft pad"><img src="img/badge-ribbon-individual.webp" data-individual="img/badge-ribbon-individual.webp" data-dense="img/badge-ribbon-dense.webp" width="800" height="769" alt="Ribbon badge" loading="lazy" data-zoom></div><figcaption><b>Ribbon</b></figcaption></figure><figure class="tile"><div class="art on-soft pad"><img src="img/badge-shield-individual.webp" data-individual="img/badge-shield-individual.webp" data-dense="img/badge-shield-dense.webp" width="800" height="889" alt="Shield badge" loading="lazy" data-zoom></div><figcaption><b>Shield</b></figcaption></figure></div>
+  </section>
+
+  <section class="sec" id="sun">
+    <header class="sec-head"><p class="eyebrow">Pick 3 of 3 · optional</p><h2>Add a sunset?</h2><p class="sub">A sun rising behind the trees, three ways. Or keep the logo as it is. The small pictures show it on black and orange.</p></header>
+    <div class="g4"><figure class="sun-card"><div class="art"><img src="img/sun-none-white-individual.webp" data-individual="img/sun-none-white-individual.webp" data-dense="img/sun-none-white-dense.webp" width="800" height="800" alt="No sun logo on white" loading="lazy" data-zoom></div><div class="minis"><div class="art"><img src="img/sun-none-black-individual.webp" data-individual="img/sun-none-black-individual.webp" data-dense="img/sun-none-black-dense.webp" width="800" height="800" alt="No sun logo on black" loading="lazy" data-zoom></div><div class="art"><img src="img/sun-none-orange-individual.webp" data-individual="img/sun-none-orange-individual.webp" data-dense="img/sun-none-orange-dense.webp" width="800" height="800" alt="No sun logo on orange" loading="lazy" data-zoom></div></div><figcaption><b>No sun</b><span>The logo as it is now.</span></figcaption></figure><figure class="sun-card"><div class="art"><img src="img/sun-stripes-white-individual.webp" data-individual="img/sun-stripes-white-individual.webp" data-dense="img/sun-stripes-white-dense.webp" width="800" height="800" alt="Stripes logo on white" loading="lazy" data-zoom></div><div class="minis"><div class="art"><img src="img/sun-stripes-black-individual.webp" data-individual="img/sun-stripes-black-individual.webp" data-dense="img/sun-stripes-black-dense.webp" width="800" height="800" alt="Stripes logo on black" loading="lazy" data-zoom></div><div class="art"><img src="img/sun-stripes-orange-individual.webp" data-individual="img/sun-stripes-orange-individual.webp" data-dense="img/sun-stripes-orange-dense.webp" width="800" height="800" alt="Stripes logo on orange" loading="lazy" data-zoom></div></div><figcaption><b>Stripes</b><span>White lines cut across the sun, wider toward the trees.</span></figcaption></figure><figure class="sun-card"><div class="art"><img src="img/sun-streaks-white-individual.webp" data-individual="img/sun-streaks-white-individual.webp" data-dense="img/sun-streaks-white-dense.webp" width="800" height="800" alt="Streaks logo on white" loading="lazy" data-zoom></div><div class="minis"><div class="art"><img src="img/sun-streaks-black-individual.webp" data-individual="img/sun-streaks-black-individual.webp" data-dense="img/sun-streaks-black-dense.webp" width="800" height="800" alt="Streaks logo on black" loading="lazy" data-zoom></div><div class="art"><img src="img/sun-streaks-orange-individual.webp" data-individual="img/sun-streaks-orange-individual.webp" data-dense="img/sun-streaks-orange-dense.webp" width="800" height="800" alt="Streaks logo on orange" loading="lazy" data-zoom></div></div><figcaption><b>Streaks</b><span>A half sun on the treetops, with streaks running out over the trees.</span></figcaption></figure><figure class="sun-card"><div class="art"><img src="img/sun-squiggly-white-individual.webp" data-individual="img/sun-squiggly-white-individual.webp" data-dense="img/sun-squiggly-white-dense.webp" width="800" height="800" alt="Squiggly logo on white" loading="lazy" data-zoom></div><div class="minis"><div class="art"><img src="img/sun-squiggly-black-individual.webp" data-individual="img/sun-squiggly-black-individual.webp" data-dense="img/sun-squiggly-black-dense.webp" width="800" height="800" alt="Squiggly logo on black" loading="lazy" data-zoom></div><div class="art"><img src="img/sun-squiggly-orange-individual.webp" data-individual="img/sun-squiggly-orange-individual.webp" data-dense="img/sun-squiggly-orange-dense.webp" width="800" height="800" alt="Squiggly logo on orange" loading="lazy" data-zoom></div></div><figcaption><b>Squiggly</b><span>The streaks with a gentle wave.</span></figcaption></figure></div>
+  </section>
+
+  <section class="sec" id="versions">
+    <header class="sec-head"><p class="eyebrow">Logo files</p><h2>Which version goes where</h2><p class="sub">Each version is made for one kind of background. Use the one that matches what it goes on.</p></header>
+    <div class="g4"><figure class="tile"><div class="art on-white pad"><img src="img/logo-white-individual.webp" data-individual="img/logo-white-individual.webp" data-dense="img/logo-white-dense.webp" width="1000" height="774" alt="Logo for white &amp;amp; light backgrounds" loading="lazy" data-zoom></div><figcaption><b>White &amp; light backgrounds</b><span>Website, invoices, white vehicles</span></figcaption></figure><figure class="tile"><div class="art on-black pad"><img src="img/logo-black-individual.webp" data-individual="img/logo-black-individual.webp" data-dense="img/logo-black-dense.webp" width="1000" height="774" alt="Logo for black &amp;amp; dark backgrounds" loading="lazy" data-zoom></div><figcaption><b>Black &amp; dark backgrounds</b><span>Black vehicles, dark shirts and hats</span></figcaption></figure><figure class="tile"><div class="art on-orange pad"><img src="img/logo-orange-individual.webp" data-individual="img/logo-orange-individual.webp" data-dense="img/logo-orange-dense.webp" width="1000" height="774" alt="Logo for orange backgrounds" loading="lazy" data-zoom></div><figcaption><b>Orange backgrounds</b><span>Orange vehicles and signs</span></figcaption></figure><figure class="tile"><div class="art on-white pad"><img src="img/logo-onecolor-individual.webp" data-individual="img/logo-onecolor-individual.webp" data-dense="img/logo-onecolor-dense.webp" width="1000" height="774" alt="Logo for one color" loading="lazy" data-zoom></div><figcaption><b>One color</b><span>Stamps, one-color decals, screen printing</span></figcaption></figure></div>
+    <h3>Icon</h3>
+    <p class="sub">The picture without the name, for small spaces: profile pictures, hats, website tabs.</p>
+    <div class="trio"><figure class="tile"><div class="art on-white pad"><img src="img/icon-white-individual.webp" data-individual="img/icon-white-individual.webp" data-dense="img/icon-white-dense.webp" width="480" height="242" alt="Icon for light backgrounds" loading="lazy" data-zoom></div><figcaption><b>Light backgrounds</b></figcaption></figure><figure class="tile"><div class="art on-black pad"><img src="img/icon-black-individual.webp" data-individual="img/icon-black-individual.webp" data-dense="img/icon-black-dense.webp" width="480" height="242" alt="Icon for dark backgrounds" loading="lazy" data-zoom></div><figcaption><b>Dark backgrounds</b></figcaption></figure><figure class="tile"><div class="art on-white pad"><img src="img/icon-onecolor-individual.webp" data-individual="img/icon-onecolor-individual.webp" data-dense="img/icon-onecolor-dense.webp" width="480" height="242" alt="Icon for one color" loading="lazy" data-zoom></div><figcaption><b>One color</b></figcaption></figure></div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <h2>Brand colors</h2>
+  <div class="swatches">
+    <span class="sw"><i style="--c: var(--tile-orange)"></i>Orange <code>#F15A24</code></span>
+    <span class="sw"><i style="--c: var(--brand-black)"></i>Black <code>#1B1B1B</code></span>
+    <span class="sw"><i style="--c: var(--tile-white)"></i>White <code>#FFFFFF</code></span>
+  </div>
+  <p>Lettering is Montserrat. Printers can match the orange from its code, or use its closest Pantone.</p>
+</footer>
+
+<dialog class="zoom" id="zoom" aria-label="Picture, full size"><img alt=""></dialog>
+<script>
+(() => {
+  const pics = [...document.querySelectorAll("img[data-dense]")];
+  const controls = [...document.querySelectorAll("[data-style]")];
+  const show = (style) => {
+    for (const p of pics) p.src = p.dataset[style];
+    for (const c of controls) c.setAttribute("aria-pressed", String(c.dataset.style === style));
+  };
+  for (const c of controls) c.addEventListener("click", () => show(c.dataset.style));
+
+  // a listener on each picture (not one on the page): iPhone Safari only sends taps to elements that listen
+  const zoom = document.getElementById("zoom");
+  const big = zoom.querySelector("img");
+  for (const img of document.querySelectorAll("img[data-zoom]")) {
+    img.addEventListener("click", () => {
+      const bg = getComputedStyle(img.closest(".art")).backgroundColor;
+      zoom.style.setProperty("--zbg", bg === "rgba(0, 0, 0, 0)" ? "" : bg);
+      big.src = img.currentSrc || img.src;
+      big.alt = img.alt;
+      zoom.showModal();
+    });
+  }
+  zoom.addEventListener("click", () => zoom.close());
+})();
+</script>
+</body>
+</html>
